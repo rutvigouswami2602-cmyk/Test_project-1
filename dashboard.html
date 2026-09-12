@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Oak University - Test Case Sheet</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #f3f4f6; color: #333; padding: 10px; }
+        .container { background-color: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .header { text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 10px; margin-bottom: 15px; }
+        h2 { margin: 0; color: #1e3a8a; font-size: 18px; }
+        h3 { margin: 5px 0 0 0; color: #4b5563; font-size: 14px; }
+        .grid-form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full-width { grid-column: span 2; }
+        label { font-size: 12px; font-weight: bold; color: #374151; margin-bottom: 3px; }
+        input, select, textarea { padding: 6px; border: 1px solid #d1d5db; border-radius: 4px; font-size: 13px; width: 100%; box-sizing: border-box; }
+        textarea { resize: vertical; height: 50px; }
+        .btn-save { background-color: #1e3a8a; color: white; border: none; padding: 10px; border-radius: 4px; font-weight: bold; cursor: pointer; width: 100%; font-size: 14px; margin-bottom: 20px; }
+        .table-container { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 600px; }
+        th, td { border: 1px solid #cbd5e1; padding: 8px; text-align: left; }
+        th { background-color: #f1f5f9; color: #1e3a8a; }
+        .status-select { padding: 2px; font-size: 11px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>SILVER OAK UNIVERSITY</h2>
+        <h3>Test Case Design Sheet</h3>
+    </div>
+
+    <!-- ऊपरी जानकारी (Top Metadata Form) -->
+    <div class="grid-form">
+        <div class="form-group">
+            <label>Project Name:</label>
+            <input type="text" value="Student Management System">
+        </div>
+        <div class="form-group">
+            <label>Module Name:</label>
+            <input type="text" value="Login Module">
+        </div>
+        <div class="form-group">
+            <label>Created By:</label>
+            <input type="text" placeholder="अपना नाम लिखें">
+        </div>
+        <div class="form-group">
+            <label>Date of Creation:</label>
+            <input type="date">
+        </div>
+        <div class="form-group">
+            <label>Reviewed By:</label>
+            <input type="text" value="Prof. / Instructor">
+        </div>
+        <div class="form-group">
+            <label>Date of Review:</label>
+            <input type="date">
+        </div>
+    </div>
+
+    <button class="btn-save" onclick="alert('डेटा सुरक्षित कर लिया गया है!')">Save Sheet Details</button>
+
+    <!-- नीचे की मुख्य टेबल (Main Test Case Table) -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Test Case ID</th>
+                    <th>Test Scenario / Description</th>
+                    <th>Test Steps</th>
+                    <th>Test Data</th>
+                    <th>Expected Result</th>
+                    <th>Actual Result</th>
+                    <th>Status (Pass/Fail)</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" value="TC_01" style="width:50px;"></td>
+                    <td><textarea>Check login with valid username and password</textarea></td>
+                    <td><textarea>1. Enter username&#10;2. Enter password&#10;3. Click Login</textarea></td>
+                    <td><textarea>User: admin&#10;Pass: 1234</textarea></td>
+                    <td><textarea>Should redirect to Dashboard</textarea></td>
+                    <td><textarea>Redirected successfully</textarea></td>
+                    <td>
+                        <select class="status-select">
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                            <option value="Not Run">Not Run</option>
+                        </select>
+                    </td>
+                    <td><input type="text" value="Working fine"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
